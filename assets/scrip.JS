@@ -1,5 +1,7 @@
 var searchBtn = $('#searchBtn');
 var searchBar = $('#searchBar');
+var dayForecast = $('#dayCondition');
+var todaysDay = dayjs().format('DD/MM/YYYY')
 
 searchBtn.on('click', function() {
     var citySearched = searchBar.val();
@@ -10,24 +12,33 @@ searchBtn.on('click', function() {
                 return response.json();
             })
             .then(data => {
+                var newHeader = $('<h3>');
+                var newP1 = $('<p>');
+                var newP2 = $('<p>');
+                var newP3 = $('<p>');
+                dayForecast.append(newHeader, newP1, newP2, newP3);
+
                 // How I got the name of the city 
-                var city = data.city.name
-                console.log('city ' + city);
+                var city = data.city.name;
+                newHeader.text(city + ' (' + todaysDay + ')');
 
                 // How I got the temp of the city
                 var temp = data.list[0].main.temp;
                 var tempCel = temp - 273;
                 var tempFah = tempCel * (9/5) + 32;
-                var tempRound = Math.floor(tempFah)
-                console.log('temp ' + tempRound);
+                var tempRound = Math.floor(tempFah);
+                newP1.text('Temp: ' + tempRound + ' °F')
 
                 // How I got the wind speed
-                var wind = data.list[0].wind.speed
+                var wind = data.list[0].wind.speed;
                 console.log('wind ' + wind);
+                newP2.text('Wind: ' + wind + ' MPH');
+
 
                 // How I got the humidity
                 var humid = data.list[0].main.humidity
                 console.log('humidity ' + humid);
+                newP3.text('Humidity: ' + humid + '%')
             })
             .catch(error => {
             console.error('Error during fetch operation:', error);

@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.CSS">
     <title>Weather</title>
 </head>
 <body>
     <h1 id="header">Weather Dashboard</h1>
     <aside>
         <div id="searchCont">
-            <h2 id="citySearch">Search for a City: </h2>
-            <input type="text" placeholder="Search" id="searchBar">
-            <button id="searchBtn">Search</button>
+            <div id="cityCont">
+                <h2 id="citySearch">Search for a City: </h2>
+                <input type="text" placeholder="Search" id="searchBar">
+                <button id="searchBtn">Search</button>
+            </div>    
             <div id="searchHistory">
+                <p>hello</p>    
+            </div>
+            <div id="dayCondition">
+            </div>
+            <div id="fiveForecast">
+                <h3>5-Day Forecast: </h3>
+                <div id="forecast"></div>
             </div>
         </div>
     </aside>
-    <article>
-        <div id="dayCondition">
-        </div>
-        <div>
-            <h3>5-Day Forecast: </h3>
-            <div id="forecast"></div>
-        </div>
-    </article>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
