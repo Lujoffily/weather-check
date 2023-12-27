@@ -1,6 +1,7 @@
 var searchBtn = $('#searchBtn');
 var searchBar = $('#searchBar');
 var dayForecast = $('#dayCondition');
+var cityHistory = $('#searchHistory')
 var todaysDay = dayjs().format('DD/MM/YYYY')
 
 searchBtn.on('click', function() {
@@ -16,7 +17,7 @@ searchBtn.on('click', function() {
                 var newP1 = $('<p>');
                 var newP2 = $('<p>');
                 var newP3 = $('<p>');
-                dayForecast.append(newHeader, newP1, newP2, newP3);
+                dayForecast.empty().append(newHeader, newP1, newP2, newP3);
 
                 // How I got the name of the city 
                 var city = data.city.name;
@@ -31,16 +32,26 @@ searchBtn.on('click', function() {
 
                 // How I got the wind speed
                 var wind = data.list[0].wind.speed;
-                console.log('wind ' + wind);
                 newP2.text('Wind: ' + wind + ' MPH');
 
 
                 // How I got the humidity
                 var humid = data.list[0].main.humidity
-                console.log('humidity ' + humid);
                 newP3.text('Humidity: ' + humid + '%')
             })
             .catch(error => {
             console.error('Error during fetch operation:', error);
             });
+
+
+    // Saving search to local storage 
+    localStorage.setItem('city', citySearched)
+    
+    // Retrived city searched
+    var lastCity = localStorage.getItem('city', citySearched)
+    console.log(lastCity);
+    
+    // Display last searched city
+    cityHistory.text(lastCity);
 })
+
