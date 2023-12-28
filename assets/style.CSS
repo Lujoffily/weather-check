@@ -6,103 +6,190 @@
     text-align: center;
     background-color: rgb(0, 102, 255);
     color: whitesmoke;
-    width: 52em;
+    font-size: 50px;
 }
 
 #searchCont {
     position: relative;
-    width: 84em;
     height: 25em;
+    width: 40em;
 }
 
 #cityCont {
-    width: 20em;
+    padding: 30px 0 0 10em;
 }
 
 #citySearch {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 #searchBar {
     width: 19em;
     height: 2em;
-    font-size: 15px;
+    font-size: 18.8px;
+    margin-left: 15px;
 }
 
-#searchBtn {
+button {
     width: 14.6em;
     height: 1.5em;
     background-color: rgb(0, 102, 255);
     color: whitesmoke;
     border-radius: 3px;
-    margin-top: 5px;
-    font-size: 20px;
+    margin: 8px 0 0 15px;
+    font-size: 25px;
 }
 
 #searchHistory {
     position: absolute;
-    top: 9em;
-    width: 19.5em;
+    left: 10em;
+    top: 14em;
+    width: 25em;
     border-top: 3px solid black;
     padding-top: 10px;
 }
 
 #dayCondition {
     position: absolute;
-    left: 35em;
-    top: 5px;
+    left: 155%;
+    top: 2em;
     border: 3px solid black;
-    width: 60em;
-    height: 10em;
+    width: 190%;
     padding: 10px;
+    font-size: 25px;
 }
 
 #fiveForecast {
     position: absolute;
-    left: 30em;
-    top: 10.5em;
-    font-size: 32px;
+    left: 235%;
+    top: 12em;
+    font-size: 40px;
     margin: -4em -12.5em;
 }
 
-@media screen and (max-width: 1440px) {
-    #header {
-        width: 44em;
+@media screen and (max-width: 2230px) {
+
+    #dayCondition {
+        width: 155%;
+    }
+}
+
+@media screen and (max-width: 2030px) {
+    #dayCondition {
+        width: 135%;
+        left: 140%;
     }
 
+    #fiveForecast {
+        left: 220%;
+    }
+}
+
+@media screen and (max-width: 1830px) {
     #cityCont {
-        font-size: 22px;
+        padding-left: 15px;
     }
 
-    #citySearch {
-        font-size: 1.6em;
+    #searchHistory {
+        left: 15px;
     }
 
     #dayCondition {
-        left: 23em;
+        left: 100%;
+    }
+
+    #fiveForecast {
+        left: 180%;
+    }
+}
+
+@media screen and (max-width: 1560px) {
+    #dayCondition {
+        left: 85%;
+        width: 120%;
+    }
+
+    #fiveForecast {
+        left: 165%;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    #header, #citySearch {
+        font-size: 45px;
+    }
+    
+    #searchBar {
+        font-size: 15px;
+    }
+
+    #searchBtn {
+        font-size: 25px;
+        width: 11.7em;
+    }
+    
+    #dayCondition {
+        width: 90%;
+    }
+
+    #fiveForecast {
+        font-size: 35px;
+        left: 154%;
+        top: 13em;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    #header {
-        width: 40.3em;
-    }
-
-    #citySearch {
-        font-size: 30px;
+    #dayCondition {
+        width: 70%;
     }
 }
 
-@media screen and (max-width: 1024px) {
-    #header {
-        width: 41.7em;
-    }
-
-    #cityCont {
+@media screen and (max-width: 1026px) {
+    #header, #citySearch {
         font-size: 25px;
     }
 
-    #citySearch {
-        font-size: 1.6em;
+    #cityCont {
+        width: 15em;
+    }
+
+    #searchBar {
+        font-size: 10px;
+        margin: 5px;
+    }
+
+    #searchBtn {
+        font-size: 18px;
+        width: 11em;
+        margin-left: 5px;
+    }
+
+    #searchHistory {
+        top: 10em;
+        width: 13em;
+    }
+
+    #dayCondition {
+        left: 55%;
+        height: 10em;
+    }
+
+    #fiveForecast {
+        font-size: 25px;
+        left: 105%;
+        top: 13dem;
+    }
+}
+
+@media screen and (max-width: 826px) {
+    #dayCondition {
+        left: 40%;
+    }
+
+    #fiveForecast {
+        font-size: 25px;
+        left: 90%;
+        top: 13dem;
     }
 }
