@@ -45,7 +45,7 @@ var weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${citySearch
 
 
             // How I got the humidity
-            var humid = data.main.humidity
+                 var humid = data.main.humidity
             newP3.text('Humidity: ' + humid + '%')
 
             // Saving city searched to local storage and retribing it 
